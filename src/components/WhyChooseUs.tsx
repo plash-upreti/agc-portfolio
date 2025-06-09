@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
     {
       id: 1,
       value: 12,
-      label: 'Years of Experience',
+      label: 'Years of Combined Experience',
       suffix: '+'
     },
     {
@@ -77,7 +77,7 @@ const WhyChooseUs = () => {
     },
     {
       id: 3,
-      value: 20,
+      value: 10,
       label: 'Team Members',
       suffix: '+'
     },

@@ -44,26 +44,29 @@ const Contact = () => {
       icon: <MapPin size={24} className="text-accent-500" />,
       title: 'Our Office',
       details: [
-        'Agarwal Garg & Company',
-        '123 Professional Tower, 2nd Floor',
-        'Hazratganj, Lucknow - 226001',
-        'Uttar Pradesh, India'
+        'Agarwal Garg and Company',
+        '405, 4th Floor, Aakriti Tower',
+        '19-B, Vidhan Sabha Marg',
+        'Lucknow - 226001',
+        'Uttar Pradesh, India',
+        'Business Hours: Monday to Saturday - 11:00 AM to 7:00 PM',
+        'Sunday - Closed'
       ]
     },
     {
       icon: <Phone size={24} className="text-accent-500" />,
       title: 'Phone',
       details: [
-        '+91 522 123 4567',
-        '+91 98765 43210'
+        '+91 8726186964',
+        '+91 8779967557'
       ]
     },
     {
       icon: <Mail size={24} className="text-accent-500" />,
-      title: 'Email',
+      title: 'Email & Social',
       details: [
-        'info@agcpartners.in',
-        'support@agcpartners.in'
+        'agarwalgargca@gmail.com',
+        'LinkedIn: linkedin.com/company/agarwal-garg-and-company'
       ]
     }
   ];
@@ -91,7 +94,7 @@ const Contact = () => {
       <div className="container-custom">
         <SectionHeading 
           title="Contact Us" 
-          subtitle="Get In Touch" 
+          subtitle="Send us a message" 
           alignment="center" 
         />
         
@@ -159,13 +162,12 @@ const Contact = () => {
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-charcoal-700 mb-1">
-                      Your Name <span className="text-red-500">*</span>
+                      Your Name
                     </label>
                     <input
-                      id="name"
                       type="text"
-                      className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-500 outline-none transition-colors ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
-                      placeholder="John Doe"
+                      id="name"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-500 outline-none transition-colors"
                       {...register('name', { required: 'Name is required' })}
                     />
                     {errors.name && (
@@ -173,41 +175,45 @@ const Contact = () => {
                     )}
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-charcoal-700 mb-1">
-                        Email <span className="text-red-500">*</span>
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-500 outline-none transition-colors ${errors.email ? 'border-red-500' : 'border-gray-300'}`}
-                        placeholder="john@example.com"
-                        {...register('email', { 
-                          required: 'Email is required',
-                          pattern: {
-                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                            message: 'Invalid email address'
-                          }
-                        })}
-                      />
-                      {errors.email && (
-                        <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
-                      )}
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-charcoal-700 mb-1">
-                        Phone Number
-                      </label>
-                      <input
-                        id="phone"
-                        type="tel"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-500 outline-none transition-colors"
-                        placeholder="+91 98765 43210"
-                        {...register('phone')}
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-charcoal-700 mb-1">
+                      Phone Number <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-500 outline-none transition-colors"
+                      {...register('phone', { 
+                        required: 'Phone number is required',
+                        pattern: {
+                          value: /^[0-9]{10}$/,
+                          message: 'Please enter a valid 10-digit phone number'
+                        }
+                      })}
+                    />
+                    {errors.phone && (
+                      <p className="mt-1 text-sm text-red-500">{errors.phone.message}</p>
+                    )}
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-charcoal-700 mb-1">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-300 focus:border-primary-500 outline-none transition-colors"
+                      {...register('email', {
+                        pattern: {
+                          value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                          message: 'Please enter a valid email address'
+                        }
+                      })}
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-sm text-red-500">{errors.email.message}</p>
+                    )}
                   </div>
                   
                   <div>

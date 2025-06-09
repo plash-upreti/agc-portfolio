@@ -1,12 +1,12 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import '../index.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "../index.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'AGC Portfolio',
-  description: 'Agarwal Garg Company Portfolio',
+  title: "AGC Portfolio",
+  description: "Agarwal Garg Company Portfolio",
 };
 
 export default function RootLayout({
@@ -19,4 +19,4 @@ export default function RootLayout({
       <body className={`${inter.className} overflow-x-hidden`}>{children}</body>
     </html>
   );
-} 
+}

@@ -27,7 +27,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Delivering excellence in accounting, taxation, and financial advisory services since 2010
+          Delivering excellence in accounting, taxation, and financial advisory services since 2024
         </motion.p>
         
         <motion.div

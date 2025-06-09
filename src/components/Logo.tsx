@@ -25,7 +25,7 @@ const Logo = ({ isScrolled = false, inFooter = false }: LogoProps) => {
             inFooter ? 'text-white' : isScrolled ? 'text-charcoal-800' : 'text-white'
           }`}
         >
-          & Company
+          and Company
         </span>
       </div>
     </div>

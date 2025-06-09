@@ -36,10 +36,11 @@ const Services = () => {
       description: 'Comprehensive audit services to ensure financial statement accuracy and compliance.',
       icon: <LineChart className="h-10 w-10 text-primary-500" />,
       details: [
-        'Statutory Audits under Companies Act',
-        'Tax Audits under Income Tax Act',
-        'Internal Audits and Control Systems',
-        'Concurrent Audits for Banks and Financial Institutions',
+        'Statutory Audit under Companies Act, 2013',
+        'Tax Audit under Income Tax Act, 1961',
+        'Internal Audits and Controls Testing',
+        'Concurrent Audits and Revenue Audits for Banks and Financial Institutions',
+        'Stock Audits',
         'Special Purpose Audits'
       ]
     },
@@ -49,8 +50,9 @@ const Services = () => {
       description: 'Strategic tax planning and compliance services for individuals and businesses.',
       icon: <Calculator className="h-10 w-10 text-primary-500" />,
       details: [
-        'Direct Tax Planning and Compliance',
+        'Income Tax Planning and Compliance',
         'GST Registration and Returns',
+        'GST Reconciliation with Books',
         'International Taxation',
         'Tax Dispute Resolution',
         'Transfer Pricing'
@@ -76,7 +78,7 @@ const Services = () => {
       icon: <FileCheck className="h-10 w-10 text-primary-500" />,
       details: [
         'Company Law Compliance',
-        'FEMA Compliance',
+        'MSME Compliances',
         'ROC Filings',
         'Due Diligence',
         'Secretarial Services'
@@ -102,6 +104,7 @@ const Services = () => {
       icon: <Rocket className="h-10 w-10 text-primary-500" />,
       details: [
         'Business Registration and Incorporation',
+        'Start up India Registration',
         'Funding Advisory',
         'Compliance Setup',
         'Financial Projections',
@@ -115,7 +118,6 @@ const Services = () => {
       icon: <Heart className="h-10 w-10 text-primary-500" />,
       details: [
         'NGO Registration',
-        'FCRA Registration and Compliance',
         '80G/12A Registration',
         'Grant Management',
         'Donor Reporting'

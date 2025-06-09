@@ -28,32 +28,32 @@ const Partners = () => {
       id: 1,
       name: 'CA Archana Agarwal',
       role: 'Founding Partner',
-      bio: 'With over 15 years of experience in audit, taxation, and financial advisory, CA Archana Agarwal specializes in strategic tax planning and compliance management for large corporations. Her expertise in direct taxation and corporate restructuring has helped numerous clients optimize their tax positions and improve financial performance.',
+      bio: 'With over 6 years of experience in audit, taxation, and financial advisory, CA Archana Agarwal specializes in strategic tax planning and compliance management. Her expertise in direct taxation and corporate restructuring has helped numerous clients optimize their tax positions and improve financial performance.',
       imageUrl: 'https://images.pexels.com/photos/5669619/pexels-photo-5669619.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       education: [
-        'Fellow Member, Institute of Chartered Accountants of India',
-        'B.Com (Hons), Lucknow University'
+        'Chartered Accountant',
+        'B.Com, Lucknow University'
       ],
       social: {
-        email: 'archana@agcpartners.in',
-        linkedin: '#',
-        phone: '+91 98765 43210'
+        email: 'caarchanaagarwal@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/caarchanaagarwal',
+        phone: '+91 8726186964'
       }
     },
     {
       id: 2,
       name: 'CA Mehul Garg',
-      role: 'Managing Partner',
-      bio: 'CA Mehul Garg brings 12+ years of expertise in audit, financial consulting, and business advisory. He specializes in GST implementation, international taxation, and startup financial structuring. Mehul is known for his client-first approach and ability to simplify complex financial matters for business owners and entrepreneurs.',
+      role: 'Founding Partner',
+      bio: 'CA Mehul Garg brings over 6 years of expertise in audit, financial consulting, and business advisory. He specializes in GST implementation, international taxation, and startup financial structuring. Mehul is known for his client-first approach and ability to simplify complex financial matters for business owners and entrepreneurs.',
       imageUrl: 'https://images.pexels.com/photos/3778603/pexels-photo-3778603.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
       education: [
-        'Fellow Member, Institute of Chartered Accountants of India',
-        'M.Com, Delhi University'
+        'Chartered Accountant',
+        'B.Com (Hons.), Lucknow University'
       ],
       social: {
-        email: 'mehul@agcpartners.in',
-        linkedin: '#',
-        phone: '+91 98765 43211'
+        email: 'camehulgarg@gmail.com',
+        linkedin: 'https://www.linkedin.com/in/camehulgarg',
+        phone: '+91 8779967557'
       }
     }
   ];

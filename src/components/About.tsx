@@ -49,17 +49,13 @@ const About = () => {
           >
             <h3 className="text-primary-500 mb-4">Our Story</h3>
             <p className="mb-4">
-              Founded in 2010 by CA Archana Agarwal and CA Mehul Garg, Agarwal Garg & Company 
-              has grown from a small practice to one of Lucknow's most trusted chartered accountancy firms.
+              Founded in 2024 by Chartered Accountants Archana Agarwal and Mehul Garg, Agarwal Garg and Company is a professionally managed chartered accountancy firm headquartered in Lucknow.
             </p>
             <p className="mb-4">
-              With over a decade of experience, we have helped hundreds of businesses 
-              navigate complex financial landscapes, optimize tax strategies, and achieve sustainable growth.
+              Though recently established, the firm draws on the founders' extensive prior experience in statutory audits, tax consultancy, and financial advisory across diverse industries. Within a short span, the firm has earned a reputation for precision, integrity, and client-centric service delivery.
             </p>
             <p>
-              Our team combines traditional accounting expertise with modern business practices, 
-              making us the ideal partner for businesses seeking proactive financial guidance 
-              in today's dynamic economic environment.
+              We offer a comprehensive suite of services including tax planning, business compliance, financial reporting, audit & assurance, and strategic advisory. Our approach integrates classical accounting discipline with forward-looking, tech-enabled solutions—positioning us as a value-driven partner for emerging and growth-stage businesses navigating India's evolving financial and regulatory ecosystem.
             </p>
           </motion.div>
           
