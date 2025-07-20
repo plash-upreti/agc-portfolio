@@ -5,12 +5,14 @@ interface SectionHeadingProps {
   title: string;
   subtitle?: string;
   alignment?: 'left' | 'center' | 'right';
+  id?: string;
 }
 
 const SectionHeading = ({ 
   title, 
   subtitle, 
-  alignment = 'left' 
+  alignment = 'left',
+  id
 }: SectionHeadingProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -36,7 +38,10 @@ const SectionHeading = ({
           {subtitle}
         </span>
       )}
-      <h2 className="text-charcoal-800 relative pb-3 mb-0">
+      <h2 
+        id={id}
+        className="text-charcoal-800 relative pb-3 mb-0 text-3xl md:text-4xl font-bold"
+      >
         {title}
         <span className="absolute bottom-0 left-0 w-20 h-1 bg-accent-500 rounded"></span>
       </h2>

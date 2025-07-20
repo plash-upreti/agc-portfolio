@@ -1,5 +1,3 @@
-import { Building2 } from 'lucide-react';
-
 interface LogoProps {
   isScrolled?: boolean;
   inFooter?: boolean;
@@ -8,9 +6,10 @@ interface LogoProps {
 const Logo = ({ isScrolled = false, inFooter = false }: LogoProps) => {
   return (
     <div className="flex items-center space-x-2">
-      <Building2 
-        size={28} 
-        className={inFooter ? 'text-white' : isScrolled ? 'text-primary-500' : 'text-white'} 
+      <img 
+        src="/clipart702255.png"
+        alt="CA Logo"
+        className="w-10 h-10 object-contain"
       />
       <div className="flex flex-col">
         <span 

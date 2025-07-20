@@ -78,12 +78,17 @@ const Partners = () => {
   };
 
   return (
-    <section id="partners" className="section bg-gray-50">
+    <section 
+      id="partners" 
+      className="section bg-gray-50"
+      aria-labelledby="partners-heading"
+    >
       <div className="container-custom">
         <SectionHeading 
           title="Our Leadership" 
           subtitle="Meet Our Partners" 
-          alignment="center" 
+          alignment="center"
+          id="partners-heading"
         />
         
         <motion.div 
@@ -92,70 +97,75 @@ const Partners = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
+          role="list"
+          aria-label="Our Chartered Accountant partners"
         >
           {partners.map((partner) => (
-            <motion.div 
+            <motion.article 
               key={partner.id} 
               className="bg-white rounded-lg shadow-card overflow-hidden"
               variants={itemVariants}
+              role="listitem"
             >
               <div className="md:flex">
-                
                 <div className="p-6">
                   <div className="flex flex-col h-full">
-                    <div className="mb-4">
+                    <header className="mb-4">
                       <h3 className="text-2xl font-bold text-primary-500">{partner.name}</h3>
                       <p className="text-charcoal-600 font-medium">{partner.role}</p>
-                    </div>
+                    </header>
                     
                     <p className="text-charcoal-700 mb-4 text-sm">{partner.bio}</p>
                     
-                    <div className="mb-4">
+                    <section className="mb-4">
                       <h4 className="text-sm font-semibold text-charcoal-800 mb-2">Education</h4>
-                      <ul className="text-sm space-y-1">
+                      <ul className="text-sm space-y-1" role="list">
                         {partner.education.map((edu, index) => (
-                          <li key={index} className="text-charcoal-600">{edu}</li>
+                          <li key={index} className="text-charcoal-600" role="listitem">{edu}</li>
                         ))}
                       </ul>
-                    </div>
+                    </section>
                     
-                    <div className="mt-auto">
-                      <div className="flex space-x-3">
+                    <footer className="mt-auto">
+                      <div className="flex space-x-3" role="list" aria-label={`Contact ${partner.name}`}>
                         {partner.social.email && (
                           <a 
                             href={`mailto:${partner.social.email}`} 
-                            className="text-primary-500 hover:text-primary-600 transition-colors"
+                            className="text-primary-500 hover:text-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
                             aria-label={`Email ${partner.name}`}
+                            role="listitem"
                           >
-                            <Mail size={18} />
+                            <Mail size={18} aria-hidden="true" />
                           </a>
                         )}
                         {partner.social.linkedin && (
                           <a 
                             href={partner.social.linkedin} 
-                            className="text-primary-500 hover:text-primary-600 transition-colors"
+                            className="text-primary-500 hover:text-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
                             aria-label={`LinkedIn profile of ${partner.name}`}
                             target="_blank"
                             rel="noopener noreferrer"
+                            role="listitem"
                           >
-                            <Linkedin size={18} />
+                            <Linkedin size={18} aria-hidden="true" />
                           </a>
                         )}
                         {partner.social.phone && (
                           <a 
                             href={`tel:${partner.social.phone}`} 
-                            className="text-primary-500 hover:text-primary-600 transition-colors"
+                            className="text-primary-500 hover:text-primary-600 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
                             aria-label={`Call ${partner.name}`}
+                            role="listitem"
                           >
-                            <Phone size={18} />
+                            <Phone size={18} aria-hidden="true" />
                           </a>
                         )}
                       </div>
-                    </div>
+                    </footer>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </motion.div>
       </div>

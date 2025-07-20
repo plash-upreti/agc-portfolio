@@ -33,8 +33,8 @@ const Services = () => {
     {
       id: 1,
       title: 'Audit & Assurance',
-      description: 'Comprehensive audit services to ensure financial statement accuracy and compliance.',
-      icon: <LineChart className="h-10 w-10 text-primary-500" />,
+      description: 'Comprehensive audit services to ensure financial statement accuracy and compliance with Indian regulations.',
+      icon: <LineChart className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'Statutory Audit under Companies Act, 2013',
         'Tax Audit under Income Tax Act, 1961',
@@ -46,9 +46,9 @@ const Services = () => {
     },
     {
       id: 2,
-      title: 'Taxation',
-      description: 'Strategic tax planning and compliance services for individuals and businesses.',
-      icon: <Calculator className="h-10 w-10 text-primary-500" />,
+      title: 'Taxation Services',
+      description: 'Strategic tax planning and compliance services for individuals and businesses in India.',
+      icon: <Calculator className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'Income Tax Planning and Compliance',
         'GST Registration and Returns',
@@ -61,8 +61,8 @@ const Services = () => {
     {
       id: 3,
       title: 'Accounting Services',
-      description: 'Reliable accounting and bookkeeping services for businesses of all sizes.',
-      icon: <BookOpen className="h-10 w-10 text-primary-500" />,
+      description: 'Reliable accounting and bookkeeping services for businesses of all sizes across India.',
+      icon: <BookOpen className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'Bookkeeping and Accounting',
         'Financial Statement Preparation',
@@ -74,8 +74,8 @@ const Services = () => {
     {
       id: 4,
       title: 'Compliance Services',
-      description: 'End-to-end compliance services to navigate complex regulatory requirements.',
-      icon: <FileCheck className="h-10 w-10 text-primary-500" />,
+      description: 'End-to-end compliance services to navigate complex Indian regulatory requirements.',
+      icon: <FileCheck className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'Company Law Compliance',
         'MSME Compliances',
@@ -87,8 +87,8 @@ const Services = () => {
     {
       id: 5,
       title: 'Business Advisory',
-      description: 'Strategic business consulting to help your organization thrive and grow.',
-      icon: <Briefcase className="h-10 w-10 text-primary-500" />,
+      description: 'Strategic business consulting to help your organization thrive and grow in the Indian market.',
+      icon: <Briefcase className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'Business Restructuring',
         'Mergers and Acquisitions',
@@ -100,8 +100,8 @@ const Services = () => {
     {
       id: 6,
       title: 'Startup Services',
-      description: 'Specialized services for startups from inception through growth phases.',
-      icon: <Rocket className="h-10 w-10 text-primary-500" />,
+      description: 'Specialized services for Indian startups from inception through growth phases.',
+      icon: <Rocket className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'Business Registration and Incorporation',
         'Start up India Registration',
@@ -114,8 +114,8 @@ const Services = () => {
     {
       id: 7,
       title: 'Not-for-Profit Services',
-      description: 'Specialized accounting and compliance services for NGOs and charitable organizations.',
-      icon: <Heart className="h-10 w-10 text-primary-500" />,
+      description: 'Specialized accounting and compliance services for NGOs and charitable organizations in India.',
+      icon: <Heart className="h-10 w-10 text-primary-500" aria-hidden="true" />,
       details: [
         'NGO Registration',
         '80G/12A Registration',
@@ -149,12 +149,17 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="section bg-white">
+    <section 
+      id="services" 
+      className="section bg-white"
+      aria-labelledby="services-heading"
+    >
       <div className="container-custom">
         <SectionHeading 
           title="Our Services" 
           subtitle="Comprehensive Financial Solutions" 
-          alignment="center" 
+          alignment="center"
+          id="services-heading"
         />
         
         <motion.div 
@@ -163,33 +168,37 @@ const Services = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
+          role="list"
+          aria-label="Our professional CA services"
         >
           {services.map((service) => (
-            <motion.div
+            <motion.article
               key={service.id}
-              className="service-card group relative overflow-hidden"
+              className="service-card group relative overflow-hidden bg-white rounded-lg shadow-card p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300"
               variants={itemVariants}
+              role="listitem"
             >
               <div className="flex flex-col h-full">
-                <div className="mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <div className="mb-4" aria-hidden="true">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-2 text-charcoal-800">{service.title}</h3>
                 <p className="text-charcoal-600 mb-4 flex-grow">{service.description}</p>
                 
                 <button
-                  className="flex items-center text-primary-500 hover:text-primary-600 transition-colors duration-300"
+                  className="flex items-center text-primary-500 hover:text-primary-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 rounded"
                   onClick={() => toggleExpanded(service.id)}
                   aria-expanded={expandedId === service.id}
                   aria-controls={`service-details-${service.id}`}
+                  aria-label={`${expandedId === service.id ? 'Hide' : 'Show'} details for ${service.title}`}
                 >
                   {expandedId === service.id ? (
                     <>
                       <span>Show less</span>
-                      <ChevronUp size={16} className="ml-1" />
+                      <ChevronUp size={16} className="ml-1" aria-hidden="true" />
                     </>
                   ) : (
                     <>
                       <span>Learn more</span>
-                      <ChevronDown size={16} className="ml-1" />
+                      <ChevronDown size={16} className="ml-1" aria-hidden="true" />
                     </>
                   )}
                 </button>
@@ -203,12 +212,14 @@ const Services = () => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                       className="mt-4 overflow-hidden"
+                      role="region"
+                      aria-label={`Detailed services for ${service.title}`}
                     >
-                      <ul className="space-y-2">
+                      <ul className="space-y-2" role="list">
                         {service.details.map((detail, index) => (
-                          <li key={index} className="flex items-start">
-                            <span className="bg-primary-100 text-primary-500 rounded-full h-1.5 w-1.5 mt-2 mr-2"></span>
-                            <span className="text-charcoal-700">{detail}</span>
+                          <li key={index} className="flex items-start" role="listitem">
+                            <span className="bg-primary-100 text-primary-500 rounded-full h-1.5 w-1.5 mt-2 mr-2 flex-shrink-0" aria-hidden="true"></span>
+                            <span className="text-charcoal-700 text-sm">{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -216,7 +227,7 @@ const Services = () => {
                   )}
                 </AnimatePresence>
               </div>
-            </motion.div>
+            </motion.article>
           ))}
         </motion.div>
       </div>
