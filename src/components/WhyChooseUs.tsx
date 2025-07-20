@@ -65,13 +65,13 @@ const WhyChooseUs = () => {
   const stats: Stat[] = [
     {
       id: 1,
-      value: 12,
+      value: 5,
       label: 'Years of Combined Experience',
       suffix: '+'
     },
     {
       id: 2,
-      value: 500,
+      value: 50,
       label: 'Satisfied Clients',
       suffix: '+'
     },
