@@ -873,9 +873,6 @@ video {
 .h-10 {
   height: 2.5rem;
 }
-.h-64 {
-  height: 16rem;
-}
 .h-8 {
   height: 2rem;
 }
@@ -1097,10 +1094,6 @@ video {
 }
 .bg-center {
   background-position: center;
-}
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .p-3 {
   padding: 0.75rem;
@@ -1356,26 +1349,6 @@ video {
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:h-full {
-    height: 100%;
-  }
-
-  .md\:w-2\/5 {
-    width: 40%;
-  }
-
-  .md\:w-3\/5 {
-    width: 60%;
-  }
-
-  .md\:w-full {
-    width: 100%;
-  }
-
-  .md\:flex-shrink-0 {
-    flex-shrink: 0;
   }
 
   .md\:grid-cols-2 {

@@ -49,7 +49,7 @@ const Contact = () => {
         '19-B, Vidhan Sabha Marg',
         'Lucknow - 226001',
         'Uttar Pradesh, India',
-        'Business Hours: Monday to Saturday - 11:00 AM to 7:00 PM',
+        'Business Hours: Monday to Saturday - 10:00 AM to 7:00 PM',
         'Sunday - Closed'
       ]
     },
@@ -129,12 +129,8 @@ const Contact = () => {
                 <h4 className="font-bold text-lg mb-4">Business Hours</h4>
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="text-charcoal-600">Monday - Friday:</span>
-                    <span className="font-medium">9:30 AM - 6:30 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-charcoal-600">Saturday:</span>
-                    <span className="font-medium">10:00 AM - 4:00 PM</span>
+                    <span className="text-charcoal-600">Monday - Saturday</span>
+                    <span className="font-medium">10:00 AM - 7:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-charcoal-600">Sunday:</span>

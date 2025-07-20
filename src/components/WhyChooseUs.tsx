@@ -39,7 +39,7 @@ const WhyChooseUs = () => {
     {
       id: 1,
       title: 'Experienced Team',
-      description: 'Our team consists of highly qualified professionals with decades of combined experience across various industries and specializations.',
+      description: 'Our team consists of highly qualified professionals with 5+ years of combined experience across various industries and specializations.',
       icon: <Users className="h-8 w-8 text-accent-500" />
     },
     {
